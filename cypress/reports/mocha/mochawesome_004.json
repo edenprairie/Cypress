@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-01T20:05:04.587Z",
+    "end": "2020-03-01T20:06:23.463Z",
+    "duration": 78876,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5dcc302f-1d42-4650-906c-517b8113c798",
+      "title": "",
+      "fullFile": "cypress\\integration\\Novologix\\TC_01_viewauthdetails.spec.js",
+      "file": "cypress\\integration\\Novologix\\TC_01_viewauthdetails.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "15b18932-d0e1-48df-9956-4ead70cb87cb",
+          "title": "Copy auth from existing one",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "View Auth Details - Copy auth - Save auth",
+              "fullTitle": "Copy auth from existing one View Auth Details - Copy auth - Save auth",
+              "timedOut": null,
+              "duration": 67401,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[style=\"width: 90px; left: 150px;\"] > .ag-floating-filter-body > .ag-input-wrapper > .ag-floating-filter-input', {\n  timeout: 30000\n}).type('431478{enter}');\ncy.get('.ag-cell-last-left-pinned > a').should('contain', '431478').first().click();\ncy.get('.modal-headerAlert > div').should('contain', 'Your Authorization');\ncy.url().should('include', 'authorization/show');\ncy.get('#btnCopy', {\n  timeout: 30000\n}).should('be.visible').click();\ncy.get('#modalid > .modal-content > .modal-footer > .nlx-button-positive', {\n  timeout: 30000\n}).should('be.visible').click();\ncy.get('.injectableSection > form.ng-untouched > :nth-child(1) > .form-group > .col-md-7 > nlx-calendar > div.ng-untouched > [style=\"white-space:nowrap;\"] > span.nlx-label', {\n  timeout: 30000\n}).click();\ncy.get('.injectableSection > form.ng-pristine > :nth-child(1) > .form-group > .col-md-7 > nlx-calendar > div.ng-pristine > .ui-dropdown-panel > :nth-child(1) > div > :nth-child(2)').click();\ncy.get('.col-md-7 > nlx-calendar > .ng-invalid > .ui-dropdown-panel > [style=\"width:100%; height:25px; padding-left:5px; padding-right:5px; padding-top:2px; margin-bottom:10px;\"] > :nth-child(2)').click();\ncy.get('.col-md-7 > div > .ui-inputtext').select('Normal');\ncy.get(':nth-child(3) > .col-md-12 > [style=\"display:inline-block;\"] > :nth-child(1) > .ui-inputtext').select('Office');\ncy.get('.src-panelShadow > div.ng-untouched > [style=\"white-space:nowrap;\"] > .nlx-control').type('Perjeta');\ncy.get('.src-panelShadow > div.ng-untouched > [style=\"white-space:nowrap;\"] > .nlx-label > .fa').click();\ncy.get('[style=\"line-height:20px;width:12%;text-align:left;\"]').click();\ncy.get('#btnSave', {\n  timeout: 30000\n}).should('be.visible').should('not.be.disabled').click();\ncy.get('#btnSubmitAuthorization', {\n  timeout: 30000\n}).should('be.visible');",
+              "err": {},
+              "uuid": "a0dd6585-0feb-41e3-ae49-17fea859703a",
+              "parentUUID": "15b18932-d0e1-48df-9956-4ead70cb87cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a0dd6585-0feb-41e3-ae49-17fea859703a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 67401,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

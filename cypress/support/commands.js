@@ -14,8 +14,29 @@ Cypress.Commands.add("SignIn", () => {
 })
 
 
-Cypress.Commands.add("NLXLogin", () => {
-    cy.visit('https://qa-app.novologix.net/')
+Cypress.Commands.add("NLXDEVLogin", () => {
+    cy.visit(Cypress.env('DEVBaseURL'))
+    cy.get('#userid').type('jun.wang@cvshealth.com')
+    cy.get('#password').type('Test123456@')
+    cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()
+})
+
+Cypress.Commands.add("NLXINTLogin", () => {
+    cy.visit(Cypress.env('INTBaseURL'))
+    cy.get('#userid').type('jun.wang@cvshealth.com')
+    cy.get('#password').type('Test123456@')
+    cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()
+})
+
+Cypress.Commands.add("NLXQALogin", () => {
+    cy.visit(Cypress.env('QABaseURL'))
+    cy.get('#userid').type('jun.wang@cvshealth.com')
+    cy.get('#password').type('Test123456@')
+    cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()
+})
+
+Cypress.Commands.add("NLXLocalLogin", () => {
+    cy.visit(Cypress.env('LocalBaseURL'))
     cy.get('#userid').type('jun.wang@cvshealth.com')
     cy.get('#password').type('Test123456@')
     cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()

@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-03-01T21:08:21.380Z",
+    "end": "2020-03-01T21:08:21.822Z",
+    "duration": 442,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9eff63e9-1120-46ea-97c8-cee1e7d6b5dd",
+      "title": "",
+      "fullFile": "cypress\\integration\\Novologix\\TC_00_login.spec.js",
+      "file": "cypress\\integration\\Novologix\\TC_00_login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6234459f-9572-4af8-9ecb-7da78dac1435",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Login Sign in",
+              "timedOut": null,
+              "duration": 425,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('NLXQABaseURL'));\ncy.get('#userid').type('jun.wang@cvshealth.com');\ncy.get('#password').type('Test123456@');\ncy.get('[style=\"display: flex;justify-content: center; margin-left: -.5em;\"] > .nlx-button').should('be.visible').click();",
+              "err": {
+                "message": "CypressError: cy.visit() must be called with a URL or an options object containing a URL as its 1st argument",
+                "estack": "CypressError: cy.visit() must be called with a URL or an options object containing a URL as its 1st argument\n    at cypressErr (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:138036:9)\n    at throwErr (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:137969:11)\n    at Object.throwErrByPath (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:138017:3)\n    at Context.visit (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:126638:19)\n    at https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:136453:33\n    at tryCatcher (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:164895:23)\n    at Promise._settlePromiseFromHandler (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:162831:31)\n    at Promise._settlePromise (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:162888:18)\n    at Promise._settlePromiseCtx (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:162925:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:159625:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:159630:10)\n    at Async.drainQueues (https://react-redux.realworld.io/__cypress/runner/cypress_runner.js:159504:14)",
+                "diff": null
+              },
+              "uuid": "90080ff7-66c4-464b-b91a-d818379bb767",
+              "parentUUID": "6234459f-9572-4af8-9ecb-7da78dac1435",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "90080ff7-66c4-464b-b91a-d818379bb767"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 425,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

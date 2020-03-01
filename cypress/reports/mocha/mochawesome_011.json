@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-03-01T20:07:55.126Z",
+    "end": "2020-03-01T20:08:02.844Z",
+    "duration": 7718,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "876a804e-e208-4172-a265-890dd7a2b2c1",
+      "title": "",
+      "fullFile": "cypress\\integration\\QAM\\TC07_plugin_uploadFiles.spec.js",
+      "file": "cypress\\integration\\QAM\\TC07_plugin_uploadFiles.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0915798-14bb-4987-bf02-f3cc266c318e",
+          "title": "Working with plugins",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "File upload",
+              "fullTitle": "Working with plugins File upload",
+              "timedOut": null,
+              "duration": 5393,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://cgi-lib.berkeley.edu/ex/fup.html'); // upload file\nvar fileName = 'SampleFile.pdf';\ncy.fixture(fileName).then(function (fileContent) {\n  cy.get('[type=\"file\"]').upload({\n    fileContent: fileContent,\n    fileName: fileName,\n    mimeType: 'application/pdf'\n  });\n});\ncy.get('[type=\"submit\"]').click();\ncy.contains(\"You've uploaded a file.  Your notes on the file were:\");",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find content: 'You've uploaded a file.  Your notes on the file were:' but never did.",
+                "estack": "CypressError: Timed out retrying: Expected to find content: 'You've uploaded a file.  Your notes on the file were:' but never did.\n    at cypressErr (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:138036:9)\n    at throwErr (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:137969:11)\n    at Object.throwErrByPath (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:138017:3)\n    at retry (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:132299:19)\n    at onFailFn (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:120514:16)\n    at tryCatcher (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:164895:23)\n    at Promise._settlePromiseFromHandler (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:162831:31)\n    at Promise._settlePromise (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:162888:18)\n    at Promise._settlePromise0 (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:162933:10)\n    at Promise._settlePromises (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:163008:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:159620:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:159630:10)\n    at Async.drainQueues (https://cgi-lib.berkeley.edu/__cypress/runner/cypress_runner.js:159504:14)",
+                "diff": null
+              },
+              "uuid": "9fe5f90c-a56a-49ea-ae66-82916d25b0d5",
+              "parentUUID": "f0915798-14bb-4987-bf02-f3cc266c318e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9fe5f90c-a56a-49ea-ae66-82916d25b0d5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5393,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

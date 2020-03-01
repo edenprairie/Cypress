@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-01T21:09:52.673Z",
+    "end": "2020-03-01T21:10:00.726Z",
+    "duration": 8053,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa81b6a8-3dd2-44d9-a59e-a62ed880d6a8",
+      "title": "",
+      "fullFile": "cypress\\integration\\Novologix\\TC_00_login.spec.js",
+      "file": "cypress\\integration\\Novologix\\TC_00_login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dc6db33f-ea88-455f-ad0f-c141e3103011",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in",
+              "fullTitle": "Login Sign in",
+              "timedOut": null,
+              "duration": 5527,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('QABaseURL'));\ncy.get('#userid').type('jun.wang@cvshealth.com');\ncy.get('#password').type('Test123456@');\ncy.get('[style=\"display: flex;justify-content: center; margin-left: -.5em;\"] > .nlx-button').should('be.visible').click();",
+              "err": {},
+              "uuid": "43f79e30-6289-4bb0-b62a-a702776d70e9",
+              "parentUUID": "dc6db33f-ea88-455f-ad0f-c141e3103011",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43f79e30-6289-4bb0-b62a-a702776d70e9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -2,8 +2,8 @@ describe('Copy auth from existing one', function () {
 
     Cypress.config('pageLoadTimeout', 100000)
 
-    this.beforeEach(function () {
-        cy.NLXLogin()
+    before(function () {
+        cy.NLXQALogin()
     })
 
     it('View Auth Details - Copy auth - Save auth', () => {
