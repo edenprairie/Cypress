@@ -3,19 +3,16 @@ describe('View auth details', function () {
     Cypress.config('pageLoadTimeout', 100000)
 
     before(function () {
-       cy.SignIn()
+       cy.NLXLogin()
     })
 
     it('View Auth Details', function () {
-        cy.get('ul.navbar-nav').children().contains('New Post').click()
-        cy.hash().should('include', '#/editor')
-        cy.get('form').within(($form) => {
-            cy.get('input').first().type('Test')
-            cy.get('input').eq(1).type('Test 1')
-            cy.get('textarea').last().type('Test 2')
-            cy.contains('Publish Article').click()
-        })
-        cy.url().should('include', 'article')
+        cy.get('[row-index="4"] > .ag-cell-last-left-pinned > a').click()
+        cy.get('.modal-headerAlert > div').should('contain', 'Your Authorization')
+        
+        cy.url().should('include', 'authorization/show')
+        cy.wait()
+        cy.get('[formarrayname="requestedcycles"] > auth-regimen-cycle > [style="border : 1px solid #ddd; border-radius : 4px; padding: 5px;"] > :nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) > auth-regimen-di > fieldset > :nth-child(3) > .col-md-12 > :nth-child(2) > auth-regimen-di-dose > :nth-child(1) > [style="width:8%"] > nlx-custom-input > div.ng-untouched > .nlx-control').should('contain', '840')
     })
 
     // it('Mark-unmark as favorite', function () {
