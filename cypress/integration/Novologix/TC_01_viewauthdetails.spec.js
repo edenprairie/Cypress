@@ -7,9 +7,11 @@ describe('Copy auth from existing one', function () {
     })
 
     it('View Auth Details - Copy auth - Save auth', () => {
-        cy.get('[style="width: 90px; left: 150px;"] > .ag-floating-filter-body > .ag-input-wrapper > .ag-floating-filter-input', { timeout: 30000 }).type('431478{enter}')
-        //cy.wait(1000)
-        cy.get('.ag-cell-last-left-pinned > a').should('contain', '431478').first().click()
+        cy.get('[row-index="4"] > .ag-cell-last-left-pinned > a').click()
+        //cy.get('[style="width: 90px; left: 150px;"] > .ag-floating-filter-body > .ag-input-wrapper > .ag-floating-filter-input', { timeout: 30000 }).type('431478{enter}')
+
+        //cy.get('.ag-cell-last-left-pinned > a').should('contain', '431478', { timeout: 2000 }).first().click()
+
         cy.get('.modal-headerAlert > div').should('contain', 'Your Authorization')
         cy.url().should('include', 'authorization/show')
         cy.get('#btnCopy', { timeout: 30000 }).should('be.visible').click()
@@ -27,15 +29,16 @@ describe('Copy auth from existing one', function () {
         cy.get('#btnSave', { timeout: 30000 }).should('be.visible').should('not.be.disabled').click()
         cy.get('#btnSubmitAuthorization', { timeout: 30000 }).should('be.visible')
         cy.get('#btnSubmitAuthorization').click()
-        
-        cy.get('stages-select > .row > .selectPadding > .ui-inputtext',{timeout:30000}).select('Stage II')
+
+        cy.get('stages-select > .row > .selectPadding > .ui-inputtext', { timeout: 30000 }).select('Stage II')
         cy.get('indications-select > .row > .selectPadding > .ui-inputtext').select('Adjuvant')
-       
+
         cy.get('.ui-multiselect-label').select(['HER2 Positive'])
-        
+
         cy.get('performance-select > .row > .selectPadding > .ui-inputtext').select('eCOG-2')
         cy.get(':nth-child(2) > .col-md-12 > .ng-dirty > .ng-untouched').check()
         cy.get(':nth-child(3) > .col-md-12 > .ng-dirty > .ng-untouched').check()
+
     })
 
 })
