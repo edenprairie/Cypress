@@ -1,5 +1,5 @@
 {
-  "name": "CypressDemo",
+  "name": "Novologix",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,9 +17,9 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^4.1.0",
-    "cypress-cucumber-preprocessor": "^2.0.1",
-    "cypress-file-upload": "^3.4.0",
+    "cypress": "^4.11.0",
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "cypress-file-upload": "^3.5.3",
     "cypress-multi-reporters": "^1.2.3",
     "mocha": "^6.2.2",
     "mochawesome": "^4.1.0",

@@ -24,14 +24,14 @@ Cypress.Commands.add("NLXDEVLogin", () => {
 Cypress.Commands.add("NLXINTLogin", () => {
     cy.visit(Cypress.env('INTBaseURL'))
     cy.get('#userid').type('jun.wang@cvshealth.com')
-    cy.get('#password').type('Test123456@')
+    cy.get('#password').type('Test123456@1')
     cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()
 })
 
 Cypress.Commands.add("NLXQALogin", () => {
     cy.visit(Cypress.env('QABaseURL'))
     cy.get('#userid').type('jun.wang@cvshealth.com')
-    cy.get('#password').type('Test123456@')
+    cy.get('#password').type('Test654321@1')
     cy.get('[style="display: flex;justify-content: center; margin-left: -.5em;"] > .nlx-button').should('be.visible').click()
 })
 
